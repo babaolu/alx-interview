@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ This module implements a function that creates a Pascal's Triangle """
 
+
 def pascal_triangle(n):
     """ Creates a Pascal's triangle of size n """
     pascalArray = []
