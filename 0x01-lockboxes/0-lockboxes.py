@@ -21,7 +21,10 @@ def isUnlocked(boxes, index, locked):
     else:
         return False
 
-    for key in boxes[index]:
+    while boxes[index]:
+        key = boxes[index].pop(0)
+        if key not in locked:
+            continue
         free = isUnlocked(boxes, key, locked)
         if free is True:
             return free
