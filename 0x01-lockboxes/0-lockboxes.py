@@ -18,13 +18,17 @@ def isUnlocked(boxes, index, locked):
         locked.remove(index)
         if len(locked) == 0:
             return True
-    else:
+    elif index >= len(boxes):
         return False
+
+    for key in boxes[index]:
+        if key in locked:
+            locked.remove(key)
+            if len(locked) == 0:
+                return True
 
     while boxes[index]:
         key = boxes[index].pop(0)
-        if key not in locked:
-            continue
         free = isUnlocked(boxes, key, locked)
         if free is True:
             return free
