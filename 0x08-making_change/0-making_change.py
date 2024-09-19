@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """ Implements function to add least number of coins """
+from typing import List
 
 
-def makeChange(coins, total):
+def makeChange(coins: List[int], total: int) -> int:
     """ Adds least number of coins """
     coins.sort(reverse=True)
     if total < coins[-1]:
