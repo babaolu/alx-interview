@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" Implements function to add least number of coins """
 
 
 def makeChange(coins, total):
+    """ Adds least number of coins """
     coins.sort(reverse=True)
     if total < coins[-1]:
         return 0
