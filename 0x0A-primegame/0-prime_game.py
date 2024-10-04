@@ -6,6 +6,8 @@ for the prime game
 
 def isWinner(x, name):
     """ Evaluates the winner of the game """
+    if len(name) == 0 or x > len(name):
+        return -1
     maria = 0
     ben = 0
     for rnd in range(x):
